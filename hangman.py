@@ -25,17 +25,16 @@ t=["_"]*len(s)
 lose=6
 
       
-while win!=len(t)-1 or lose!=0:
+while lose!=0:
     user=input("Guess a letter: ")
     if user in list1:
         for i in range(len(s)):
             if s[i]==user:
                 t[i]=user
                 list1.remove(user)
-                print("Thats right!")
-                string=(",").join(map(str,t))
-                print(string)
-                win+=1
+         print("Thats right!")
+         string=(",").join(map(str,t))
+         print(string)
             
         
         if checkt():
